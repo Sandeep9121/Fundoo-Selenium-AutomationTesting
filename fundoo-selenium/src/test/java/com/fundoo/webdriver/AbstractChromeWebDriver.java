@@ -24,8 +24,10 @@ public abstract class AbstractChromeWebDriver {
 		//driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	//driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		//getting protected driver  from webDriver abstracted class in com.fundoo.webdriver
-		
-		 driver.get("http://localhost:4200");	 
+		driver.manage().window().maximize();
+		// driver.get("http://localhost:4200");	 
+		 
+		 
 		 try {
 			Thread.sleep(1500);
 		} catch (InterruptedException e) {
@@ -36,8 +38,10 @@ public abstract class AbstractChromeWebDriver {
 
 	@AfterTest
 	public void exitDriver() throws InterruptedException {
+		//extent.flush();
 		Thread.sleep(10000);
-		  driver.quit();
+//		
+//		  driver.quit();
 	  }
 
 }

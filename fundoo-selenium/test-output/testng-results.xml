@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44187" started-at="2020-05-15T05:36:09Z" finished-at="2020-05-15T05:36:53Z">
+  <suite name="Default suite" duration-ms="68888" started-at="2020-05-16T06:45:02Z" finished-at="2020-05-16T06:46:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44187" started-at="2020-05-15T05:36:09Z" finished-at="2020-05-15T05:36:53Z">
+    <test name="Default test" duration-ms="68888" started-at="2020-05-16T06:45:02Z" finished-at="2020-05-16T06:46:11Z">
       <class name="com.fundoo.users.ForgotpasswordTest">
-        <test-method status="PASS" signature="runSetup()[pri:0, instance:com.fundoo.users.ForgotpasswordTest@5e025e70]" name="runSetup" is-config="true" duration-ms="11567" started-at="2020-05-15T06:36:09Z" finished-at="2020-05-15T06:36:20Z">
+        <test-method status="PASS" signature="runSetup()[pri:0, instance:com.fundoo.users.ForgotpasswordTest@49e4cb85]" name="runSetup" is-config="true" duration-ms="26327" started-at="2020-05-16T07:45:02Z" finished-at="2020-05-16T07:45:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runSetup -->
-        <test-method status="PASS" signature="forgotPaswordTest()[pri:0, instance:com.fundoo.users.ForgotpasswordTest@5e025e70]" name="forgotPaswordTest" duration-ms="21942" started-at="2020-05-15T06:36:20Z" finished-at="2020-05-15T06:36:42Z">
+        <test-method status="PASS" signature="forgotPaswordTest()[pri:0, instance:com.fundoo.users.ForgotpasswordTest@49e4cb85]" name="forgotPaswordTest" duration-ms="32545" started-at="2020-05-16T07:45:28Z" finished-at="2020-05-16T07:46:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPaswordTest -->
-        <test-method status="PASS" signature="exitDriver()[pri:0, instance:com.fundoo.users.ForgotpasswordTest@5e025e70]" name="exitDriver" is-config="true" duration-ms="10657" started-at="2020-05-15T06:36:42Z" finished-at="2020-05-15T06:36:53Z">
+        <test-method status="PASS" signature="exitDriver()[pri:0, instance:com.fundoo.users.ForgotpasswordTest@49e4cb85]" name="exitDriver" is-config="true" duration-ms="10000" started-at="2020-05-16T07:46:01Z" finished-at="2020-05-16T07:46:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exitDriver -->
