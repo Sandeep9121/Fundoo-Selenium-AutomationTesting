@@ -3,7 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.fundoo.users.ForgotpasswordTest"/>
+      <class name="com.fundoo.users.LabelTest">
+        <methods>
+          <include name="deleteLabel"/>
+        </methods>
+      </class> <!-- com.fundoo.users.LabelTest -->
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->

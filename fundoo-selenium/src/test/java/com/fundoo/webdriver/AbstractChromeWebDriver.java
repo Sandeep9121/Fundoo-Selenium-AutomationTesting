@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 
 public abstract class AbstractChromeWebDriver {
 
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
 	public AbstractChromeWebDriver() {
 		super();
@@ -19,7 +19,7 @@ public abstract class AbstractChromeWebDriver {
 	//		  driver=new ChromeDriver(); 
 //String   loginUrl="http://localhost:4200";
 			//chrome Driver manager is giving latest chromeDriver 83 so i downloaded in my system 81 hardcoded the path below
-		System.setProperty("webdriver.chrome.driver","E:\\chrome81\\chromedriver_win32\\chromedriver.exe"); 
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Mr Sandeep\\Downloads\\chromedriver_win32\\chromedriver.exe"); 
 		driver =new ChromeDriver();
 		//driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	//driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
@@ -38,10 +38,10 @@ public abstract class AbstractChromeWebDriver {
 
 	@AfterTest
 	public void exitDriver() throws InterruptedException {
-		//extent.flush();
-		Thread.sleep(10000);
-//		
-//		  driver.quit();
-	  }
+	
+	Thread.sleep(3000);
+		
+		  driver.quit();
+  }
 
 }

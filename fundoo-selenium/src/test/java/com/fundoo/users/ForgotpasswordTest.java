@@ -20,21 +20,21 @@ public class ForgotpasswordTest extends AbstractChromeWebDriver {
 																					// button
 		Thread.sleep(5000);
 		driver.get(
-				"http://localhost:4200/resetpassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjN9.i911cSTc5ZJY49BaKU36iiQ87rat-626QeW83Cnrt73EcjMmlYgMoVuwv2p_bTDPJjpBilax3dd4v04jimfVVA");
+				"http://localhost:4200/resetpassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjF9.NND4hSK9k8_pc_RpY2EPHlCGXWCKAsydRl6C9NjxxcAvCsDtxwhuoQFOcSGJslLaUAG5P77FWHPU32vGAacXeA");
 		Thread.sleep(5000);
 		// driver.findElement(By.xpath("//input[@type='password']")).sendKeys("sandeep007");
-		driver.findElement(By.id("mat-input-0")).sendKeys("sandeep007");
+		driver.findElement(By.id("mat-input-0")).sendKeys("sandeep9999");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-1")).sendKeys("sandeep007");
+		driver.findElement(By.id("mat-input-1")).sendKeys("sandeep9999");
 		Thread.sleep(1000);
 		// driver.findElement(By.xpath("//span[@class='mat-button-wrapper']")).click();
 		driver.findElement(By.xpath("//span[contains(text(),'reset')]")).click();
-		;
 		Thread.sleep(4000);
+	
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("sandeep.rayala14@gmail.com");
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("sandeep007");
-		;
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("sandeep9999");
+		
 
 		driver.findElement(By.xpath("//span[contains(text(),'Login')]")).click();
 

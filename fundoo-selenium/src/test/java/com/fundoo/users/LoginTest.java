@@ -5,59 +5,35 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.fundoo.utility.ExcelSheetReader;
 import com.fundoo.webdriver.AbstractChromeWebDriver;
 
+
 public class LoginTest extends AbstractChromeWebDriver {
-	String baseUrl;
-	//builds a new report using the html template 
-    ExtentHtmlReporter htmlReporter;
-    
-    ExtentReports extent;
-    //helps to generate the logs in test report.
-    ExtentTest test;
-//	 private boolean acceptNextAlert= true;
-//	 private StringBuffer verificationErorrs=new StringBuffer();
-	
-   // @Parameters({ "OS", "browser" })
-//    @BeforeClass
-//    public void startReport() {
-//    	// initialize the HtmlReporter
-//        htmlReporter = new ExtentHtmlReporter("./Reports/login_report.html");
-//        
-//        //initialize ExtentReports and attach the HtmlReporter
-//        extent = new ExtentReports();
-//        extent.attachReporter(htmlReporter);
-//         
-//        //To add system or environment info by using the setSystemInfo method.
-////        extent.setSystemInfo("OS", OS);
-////        extent.setSystemInfo("Browser", browser);
-//        
-//        //configuration items to change the look and feel
-//        //add content, manage tests etc
-//        htmlReporter.config().setChartVisibilityOnOpen(true);
-//        htmlReporter.config().setDocumentTitle("userReport");
-//        htmlReporter.config().setReportName("login test");
-//        htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-//        htmlReporter.config().setTheme(Theme.STANDARD);
-//        htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
-//    }
-//	
+//	String baseUrl;
+//	//builds a new report using the html template 
+//	public static ExtentTest test;
+//	public static ExtentReports extent;
+//	ExtentReportUtil report = new ExtentReportUtil();
+//	String testName = "LoginTestreport";
+//   
+//	@BeforeTest 
+//	public void beforeTest()
+//	{
+//
+//		extent = report.setExtent("testName");
+//	}
+
 	@DataProvider(name="user-login-email-password-data-provider")
 	public String[][] emailPasswordDataProvider(){
-//		return new Object [][]{
-//			{"sandeep@123","sandeep000",false},
-//			{" ","009",false},
-//			{"sandeep.rayala14@gmail.com","sandeep007",true}
-//		};
+
 		return ExcelSheetReader.readExcelInto2DArray("./src/test/resources/login-data.xlsx","Sheet1",2);
 	}
 	
 	@Test(dataProvider="user-login-email-password-data-provider")
-  public void loginTest(String email,String password)throws Exception {
+  public static void loginTest(String email,String password)throws Exception {
+		//test=extent.createTest(password);
+		//test = extent.createTest("loginTest");
 		driver.get("http://localhost:4200");
 	 WebElement findElement = driver.findElement(By.xpath("//input[@type='email']"));
 	 findElement.sendKeys(email);
@@ -92,22 +68,30 @@ public class LoginTest extends AbstractChromeWebDriver {
 //	 driver.findElement(By.xpath("//input[@type='email']")).clear();
 //	 driver.findElement(By.xpath("//input[@type='password']")).clear();
 
-	
+	//driver.close();
   }
-//    @AfterMethod
-//    public void getResult(ITestResult result) {
-//        if(result.getStatus() == ITestResult.FAILURE) {
-//            test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" FAILED ", ExtentColor.RED));
-//            test.fail(result.getThrowable());
-//        }
-//        else if(result.getStatus() == ITestResult.SUCCESS) {
-//            test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" PASSED ", ExtentColor.GREEN));
-//        }
-//        else {
-//            test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" SKIPPED ", ExtentColor.ORANGE));
-//            test.skip(result.getThrowable());
-//        }
-//    }
-     
-	
+//	@AfterMethod
+//	  public void result(ITestResult result) throws IOException
+//	  {
+//		  if(result.getStatus() == ITestResult.FAILURE)
+//			{
+//				test.log(Status.FAIL, "Test case failed:"+result.getName());
+//				test.log(Status.FAIL, "Test case failed:"+result.getThrowable());
+//				String screenshotpath = ExtentReportUtil.getScreenshot(driver, result.getName());
+//				test.addScreenCaptureFromPath(screenshotpath);
+//			}
+//		  else if(result.getStatus() == ITestResult.SUCCESS)
+//				{
+//					test.log(Status.PASS, "Test case passed:"+result.getName());
+//					String screenshotpath =ExtentReportUtil.getScreenshot(driver, result.getName());
+//					test.addScreenCaptureFromPath(screenshotpath);
+//					//test.fail("Failed", MediaEntityBuilder.createScreenCaptureFromPath(System.getProperty("user.dir")+"/test-screenshot/login.jpg").build());
+//				}
+//	  }
+//	  @AfterTest
+//	public void afterTest()
+//	{
+//		  extent.flush();
+//	}
+
 }
